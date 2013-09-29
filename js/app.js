@@ -6,7 +6,7 @@ $(document).ready(function() {
    $popular = $('#popular'),
    $recent = $('#recent'),
    $searchResults = $('#search-results'),
-   $userPhone = $('#user-phone'),
+   $userPhone = $('.user-phone'),
    $att = $('#att'),
    $xfinity = $('#xfinity'),
    $breadcrumb = $('#breadcrumb'),
