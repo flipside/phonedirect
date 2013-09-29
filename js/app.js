@@ -22,7 +22,8 @@ $(document).ready(function() {
    $phoneForm = $('#phone-form'),
    $xfinityWait = $('#xfinity-wait'),
    $phoneWait = $('#phone-wait'),
-   $cancel = $('#cancel')
+   $cancel = $('#cancel'),
+   $attGet = $('#att-get')
    ;
 
   var phone = '';
@@ -84,8 +85,9 @@ $(document).ready(function() {
     setTimeout(function () {
       alert("Your current balance is two hundred twenty six dollars and seventy two cents due by October twenty first twenty thirteen");
 
-    }, 5000);
+    }, 25000);
 
+    $attGet.toggleClass('hidden');
     $paymentForm.toggleClass('hidden');
     $search.toggleClass('hidden');
     $recent.toggleClass('hidden');

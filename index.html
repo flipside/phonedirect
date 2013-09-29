@@ -31,12 +31,12 @@
           <span class="icon-bar"></span>
         </button> -->
         <a class="navbar-brand" href="index.html">PhoneDirect</a>
-      </div>
-      <div class="nav navbar-nav pull-right">
         <p class="navbar-text pull-right" id="user-phone">
         </p>
       </div>
-    </nav>
+<!--       <div class="nav navbar-nav pull-right">
+      </div>
+ -->    </nav>
     <div class="jumbotron">
       <div class="container">
         <img src="http://brok.ly/phone.png" class="pull-right">
@@ -71,7 +71,7 @@
 
           <div class="list-group" id="recent">
             <h3> Recent </h3>
-            <a href="#" class="list-group-item">
+            <a href="#" class="list-group-item hidden" id="att-get">
               <h4 class="list-group-item-heading">Get AT&T Account Balance</h4>
               <p class="list-group-item-text">For 203-913-7178</p>
             </a>
@@ -180,7 +180,7 @@
           <div id="xfinity-wait" class="hidden">
             <h3>Xfinity Call Initiated </h3>
             <p> Estimated wait time: 12 minutes </p>
-            <p> We'll call you at <span id="phone-wait"> when they pick up!</span></p>
+            <p> We'll call you when they pick up at: <span id="phone-wait"></span></p>
             <button class="btn btn-danger" id="cancel">Cancel</button>
           </div>
 
