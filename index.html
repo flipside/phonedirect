@@ -24,48 +24,167 @@
   <body>
     <nav id="navbar" class="navbar navbar-default navbar-fixed-top">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle" id="settings-btn">
+<!--         <button type="button" class="navbar-toggle" id="settings-btn">
           <span class="sr-only">Toggle settings</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
-        </button>
+        </button> -->
         <a class="navbar-brand" href="index.html">PhoneDirect</a>
+      </div>
+      <div class="nav navbar-nav pull-right">
+        <p class="navbar-text pull-right" id="user-phone">
+        </p>
       </div>
     </nav>
     <div class="jumbotron">
       <div class="container">
         <h1>PhoneDirect</h1>
-        <p>Web App for phone customer support</p>
-        <p><a class="btn btn-primary btn-lg" id="start">Start</a></p>
+        <p>Cut through phone trees!</p>
+        <!-- <p><a class="btn btn-primary btn-lg" id="start">Start</a></p> -->
+        <div class="row">
+          <div class="col-lg-4">
+            <!-- 203-913-7178 -->
+            <div class="input-group" id="phone-number">
+              <input type="tel" class="form-control" placeholder="Enter phone number">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button" id="start">Go!</button>
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="container hidden" id="main">
       <div class="row">
         <div class="col-lg-6">
+
+          <ol class="breadcrumb hidden" id="breadcrumb">
+            <li id="home"><a href="#">Home</a></li>
+            <li id="bc1"><a href="#">AT&T Wireless</a></li>
+            <li class="hidden" id="bc2"><a href="#">Main Menu</a></li>
+            <li class="hidden" id="bc3"><a href="#">Check Balance</a></li>
+            <li class="hidden" id="bc4"><a href="#">Account Information</a></li>
+            <li class="active" id="bc-active">Main Menu</li>
+          </ol>
+
+          <div class="list-group" id="recent">
+            <h3> Recent </h3>
+            <a href="#" class="list-group-item">
+              <h4 class="list-group-item-heading">Get AT&T Account Balance</h4>
+              <p class="list-group-item-text">For 203-913-7178</p>
+            </a>
+            <a href="#" class="list-group-item" id="xfinity">
+              <h4 class="list-group-item-heading">Call Xfinity High-Speed Internet Support</h4>
+              <p class="list-group-item-text">For 203-913-7178</p>
+            </a>
+          </div>
+
           <div class="input-group" id="search">
             <input type="text" class="form-control">
             <span class="input-group-btn">
-              <button class="btn btn-default" type="button">Go!</button>
+              <button class="btn btn-default" type="button">Search</button>
             </span>
           </div>
 
-          <div class="list-group hidden" id="search-results">
+          <div class="list-group" id="popular">
+            <h3> Popular </h3>
             <a href="#" class="list-group-item" id="att">
-              AT&T
+              <span class="badge">1-800-288-2747</span>
+              AT&T Wireless
             </a>
-            <a href="#" class="list-group-item">Comcast</a>
-            <a href="#" class="list-group-item">PG&E</a>
-            <a href="#" class="list-group-item">Verizon</a>
+            <a href="#" class="list-group-item">
+              <span class="badge">1-800-XFINITY</span>
+              Comcast Xfinity
+            </a>
+            <a href="#" class="list-group-item">
+              <span class="badge">1-800-743-5000</span>
+              PG&E
+            </a>
+            <a href="#" class="list-group-item">
+              <span class="badge">1-800-837-4966</span>
+              Verizon
+            </a>
+            <a href="#" class="list-group-item">
+              <span class="badge">1-800-869-3557</span>
+              Wells Fargo
+            </a>
           </div>
 
-          <ol class="breadcrumb hidden" id="breadcrumb">
-            <li class="active" id="bc-active">AT&T</li>
-            <li class="hidden" id="bc1"><a href="#">AT&T</a></li>
-            <li class="hidden" id="bc2"><a href="#">English</a></li>
-            <li class="hidden" id="bc3"><a href="#">Phone</a></li>
-            <li class="hidden" id="bc4"><a href="#">Representative</a></li>
-          </ol>
+
+          <div class="list-group hidden" id="mainmenu">
+            <h3>Main Menu</h3>
+            <a href="#" class="list-group-item" name="p-1">
+              <h4 class="list-group-item-heading">1. Balance, Payments and Billing</h4>
+              <!-- <p class="list-group-item-text">...</p> -->
+            </a>
+            <a href="#" class="list-group-item" name="p-2">
+              <h4 class="list-group-item-heading">2. Technical Support</h4>
+              <!-- <p class="list-group-item-text">...</p> -->
+            </a>
+            <a href="#" class="list-group-item" name="p-2">
+              <h4 class="list-group-item-heading">3. Check Usage, Report a Stolen/Lost Device or Cancel Service</h4>
+              <!-- <p class="list-group-item-text">...</p> -->
+            </a>
+            <a href="#" class="list-group-item" name="p-2">
+              <h4 class="list-group-item-heading">4. Upgrades, Orders and Sales</h4>
+              <!-- <p class="list-group-item-text">...</p> -->
+            </a>
+            <a href="#" class="list-group-item" name="p-2">
+              <h4 class="list-group-item-heading">Speak to Representative</h4>
+              <!-- <p class="list-group-item-text">...</p> -->
+            </a>
+          </div>
+
+          <div class="list-group hidden" id="payments">
+            <h3>Payment Menu</h3>
+            <a href="#" class="list-group-item" name="p-1">
+              <h4 class="list-group-item-heading">Check Account Balance</h4>
+              <!-- <p class="list-group-item-text">...</p> -->
+            </a>
+            <a href="#" class="list-group-item" name="p-2">
+              <h4 class="list-group-item-heading">Pay a Bill</h4>
+              <!-- <p class="list-group-item-text">...</p> -->
+            </a>
+            <a href="#" class="list-group-item" name="p-2">
+              <h4 class="list-group-item-heading">Manage Auto-Pay Options</h4>
+              <!-- <p class="list-group-item-text">...</p> -->
+            </a>
+            <a href="#" class="list-group-item" name="p-2">
+              <h4 class="list-group-item-heading">Speak to Billing Representative</h4>
+              <!-- <p class="list-group-item-text">...</p> -->
+            </a>
+          </div>
+
+          <form role="form" id="payment-form" class="hidden">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Last 4 digits of SSN</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" placeholder="SSN">
+            </div>
+            <div class="form-group">
+              <label for="phone-form">Phone Number</label>
+              <input type="tel" class="form-control" id="phone-form" placeholder="Phone Number">
+            </div>
+            <button type="submit" class="btn btn-danger">Send Alert</button>
+            <button type="submit" class="btn btn-info">Send Text</button>
+          </form>
+
+
+          <!-- <div class="input-group hidden" id="phone-number">
+            <input type="tel" class="form-control" placeholder="Phone Number">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button">Go!</button>
+            </span>
+          </div> -->
+          <div id="xfinity-wait" class="hidden">
+            <h3>Xfinity Call Initiated </h3>
+            <p> Estimated wait time: 12 minutes </p>
+            <p> We'll call you at <span id="phone-wait"> when they pick up!</span></p>
+            <button class="btn btn-danger" id="cancel">Cancel</button>
+          </div>
+
+
+          <button class="btn btn-large btn-primary hidden" id="call">Call Now!</button>
 
         </div>
       </div>
