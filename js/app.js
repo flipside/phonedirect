@@ -87,12 +87,29 @@ $(document).ready(function() {
 
     }, 25000);
 
-    $attGet.toggleClass('hidden');
-    $paymentForm.toggleClass('hidden');
-    $search.toggleClass('hidden');
-    $recent.toggleClass('hidden');
-    $popular.toggleClass('hidden');
-    $breadcrumb.toggleClass('hidden');
+    $attGet.removeClass('hidden');
+    $paymentForm.addClass('hidden');
+    $search.removeClass('hidden');
+    $recent.removeClass('hidden');
+    $popular.removeClass('hidden');
+    $breadcrumb.addClass('hidden');
+
+  });
+
+  $attGet.on('click', function (evt) {
+    evt.preventDefault();
+
+    setTimeout(function () {
+      alert("Your current balance is two hundred twenty six dollars and seventy two cents due by October twenty first twenty thirteen");
+
+    }, 25000);
+
+    // $attGet.removeClass('hidden');
+    $paymentForm.addClass('hidden');
+    $search.removeClass('hidden');
+    $recent.removeClass('hidden');
+    $popular.removeClass('hidden');
+    $breadcrumb.addClass('hidden');
 
   });
 
