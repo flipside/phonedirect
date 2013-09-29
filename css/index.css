@@ -1,5 +1,10 @@
 body {
   padding-top: 50px;
+  min-height: 500px;
+}
+
+#main {
+  padding-top: 50px;
 }
 
 /*.hidden {
