@@ -29,8 +29,16 @@ $(document).ready(function() {
 
   var phone = '';
 
-  var alert1 = [
+  var alert0 = [
     '<div class="alert alert-block alert-info fade in">',
+      '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>',
+      '<p>Retrieving your AT&T Account Balance</p>',
+      // '<p>Your current balance is one hundred eighty seven dollars and seventy four cents due by October twenty second twenty thirteen</p>',
+    '</div>'
+  ].join('');
+
+  var alert1 = [
+    '<div class="alert alert-block alert-success fade in">',
       '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>',
       '<h4>Your AT&T Account Balance</h4>',
       '<p>Your current balance is one hundred eighty seven dollars and seventy four cents due by October twenty second twenty thirteen</p>',
@@ -53,7 +61,9 @@ $(document).ready(function() {
   $start.on('click', function () {
     console.log('click');
     phone = $phoneNumber.find('input').val();
-    phone = phone.substring(0,3)+'-'+phone.substring(3,6)+'-'+phone.substring(6,10);
+    if (phone.length !== 12) {
+      phone = phone.substring(0,3)+'-'+phone.substring(3,6)+'-'+phone.substring(6,10);
+    }
     console.log(phone);
     $userPhone.text(phone);
     $phoneWait.text(phone);
@@ -115,9 +125,12 @@ $(document).ready(function() {
   $paymentForm.find('button').on('click', function (evt) {
     evt.preventDefault();
 
+    $rowtop.prepend(alert0);
+
     setTimeout(function () {
+      $('.alert').alert('close');
       $rowtop.prepend(alert1);
-    }, 25000);
+    }, 20000);
 
     $attGet.removeClass('hidden');
     $paymentForm.addClass('hidden');
@@ -131,9 +144,12 @@ $(document).ready(function() {
   $attGet.on('click', function (evt) {
     evt.preventDefault();
 
+    $rowtop.prepend(alert0);
+
     setTimeout(function () {
+      $('.alert').alert('close');
       $rowtop.prepend(alert1);
-    }, 25000);
+    }, 20000);
 
     // $attGet.removeClass('hidden');
     $paymentForm.addClass('hidden');
