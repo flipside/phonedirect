@@ -117,7 +117,7 @@ $(document).ready(function() {
 
     setTimeout(function () {
       $rowtop.prepend(alert1);
-    }, 5000);
+    }, 25000);
 
     $attGet.removeClass('hidden');
     $paymentForm.addClass('hidden');
