@@ -31,12 +31,14 @@
           <span class="icon-bar"></span>
         </button> -->
         <a class="navbar-brand" href="index.html">PhoneDirect</a>
-        <p class="navbar-text pull-right user-phone">
+        <p class="navbar-text pull-right user-phone visible-xs">
         </p>
       </div>
-<!--       <div class="nav navbar-nav pull-right">
+      <div class="nav navbar-nav pull-right hidden-xs">
+        <p class="navbar-text user-phone">
+        </p>
       </div>
- -->    </nav>
+    </nav>
     <div class="jumbotron">
       <div class="container">
         <img src="http://brok.ly/phone.png" class="pull-right">
@@ -45,7 +47,6 @@
         <!-- <p><a class="btn btn-primary btn-lg" id="start">Start</a></p> -->
         <div class="row">
           <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-            <!-- 203-913-7178 -->
             <div class="input-group" id="phone-number">
               <input type="tel" class="form-control" placeholder="Enter phone number">
               <span class="input-group-btn">
@@ -58,15 +59,8 @@
     </div>
     <div class="container hidden" id="main">
       <div class="row">
-        <div class="col-lg-6">
-          <!-- <div class="alert alert-block alert-danger fade in">
-            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-            <h4>Oh snap! You got an error!</h4>
-            <p>Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
-            <p>
-              <a class="btn btn-danger" href="#">Take this action</a> <a class="btn btn-default" href="#">Or do this</a>
-            </p>
-          </div> -->
+        <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1" id="rowtop">
+
 
           <ol class="breadcrumb hidden" id="breadcrumb">
             <li id="home"><a href="#">Home</a></li>
@@ -185,15 +179,15 @@
               <button class="btn btn-default" type="button">Go!</button>
             </span>
           </div> -->
-          <div id="xfinity-wait" class="hidden">
+          <!-- <div id="xfinity-wait" class="hidden">
             <h3>Xfinity Call Initiated </h3>
-            <p> Estimated wait time: 12 minutes </p>
+            <p> Estimated wait time: 13 minutes </p>
             <p> We'll call you when they pick up at: <span id="phone-wait"></span></p>
             <button class="btn btn-danger" id="cancel">Cancel</button>
-          </div>
+          </div> -->
 
 
-          <button class="btn btn-large btn-primary hidden" id="call">Call Now!</button>
+          <!-- <button class="btn btn-large btn-primary hidden" id="call">Call Now!</button> -->
 
         </div>
       </div>
